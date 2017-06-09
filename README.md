@@ -19,18 +19,18 @@ YACC stands for Yet Another Compiler Compiler. Its GNU version is called Bison. 
 Yacc generates a parser in file y.tab.c and an include file y.tab.h. Lex includes this file (y.tab.h) and uses the definitions for token values found in this file for the returned tokens.
 
 
-Lexical Analyser - expr.l
+Lexical Analyser - expr.l <br>
 Syntax analyser - expr.y
 
 How to compile and run the scanner + parser ?
-lex expr.l
-yacc -d expr.y
-gcc lex.yy.c y.tab.c 
-./a.out
+lex expr.l <br>
+yacc -d expr.y <br> 
+gcc lex.yy.c y.tab.c  <br>
+./a.out <br>
 
-OR
-make
-./a.out
+OR <br>
+make <br> 
+./a.out <br>
 
 Terminate the program with CTLˆD.
 
@@ -39,20 +39,20 @@ The -d option causes yacc to generate definitions for tokens and place them in t
 The main() function calls yyparse() which automatically calls yylex()
 
 
-SAMPLE TEST CASES
-1)  Input=5-2*6+7
-Result=success
-Output=0
+SAMPLE TEST CASES <br>
+1). Input=5-2*6+7 <br>
+Result=success <br>
+Output=0 <br>
 
-2). Input=5-6/0+7
-Result=Error(divide by zero)
-Output=ERROR: Invalid Arithmetic Expression
+2). Input=5-6/0+7 <br>
+Result=Error(divide by zero) <br>
+Output=ERROR: Invalid Arithmetic Expression <br>
 
-3). Input=a-7+5
-Result=Error(unrecognized token)
-Output=ERROR: Invalid Arithmetic Expression
+3). Input=a-7+5 <br>
+Result=Error(unrecognized token) <br>
+Output=ERROR: Invalid Arithmetic Expression <br>
 
-4). Input=2-5*7/3+4-9/2
-Result=Success
-Output=-8
+4). Input=2-5*7/3+4-9/2 <br>
+Result=Success <br>
+Output=-8 <br>
  
